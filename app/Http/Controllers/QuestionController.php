@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ResponseRequest;
 use App\Models\Question;
 use App\Models\Respondent;
 use App\Models\Response;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 
 class QuestionController extends Controller
@@ -32,7 +31,7 @@ class QuestionController extends Controller
                 question_id => [ 0 => "Handwrite response"]
             ]
     */
-    public function store(Request $request)
+    public function store(ResponseRequest $request)
     {
         $respondent = Respondent::create([
             'name' => 'anonym',

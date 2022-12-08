@@ -24,6 +24,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Question::oberve(QuestionOberver::class);
+        Question::observe(QuestionOberver::class);
     }
 }
