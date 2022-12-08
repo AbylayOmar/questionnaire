@@ -14,7 +14,7 @@ class QuestionAnswerSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 1; $i < 15; ++$i) {
+        for ($i = 1; $i < 3; ++$i) {
             for ($j = 0; $j < rand(2, 5); ++$j) {
                 QuestionAnswer::create([
                     'question_id' => $i,

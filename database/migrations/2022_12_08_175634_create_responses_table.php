@@ -17,7 +17,7 @@ class CreateResponsesTable extends Migration
             $table->id();
             $table->foreignId('respondent_id');
             $table->foreignId('question_id');
-            $table->foreignId('answer_id');
+            $table->foreignId('answer_id')->nullable();
             $table->text('answer')->nullable();
             $table->timestamps();
         });
