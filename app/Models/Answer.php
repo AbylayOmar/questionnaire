@@ -11,7 +11,7 @@ class Answer extends Model
     use HasFactory;
 
     protected $fillable = [
-        'text', // if answer text is "other" it means this is custom users answer
+        'text', 'type',
     ];
 
     public function questions(): HasMany

@@ -15,6 +15,7 @@ class AnswerFactory extends Factory
     {
         return [
             'text' => $this->faker->word(),
+            'type' => rand(0, 1),
         ];
     }
 }

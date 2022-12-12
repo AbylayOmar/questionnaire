@@ -24,10 +24,10 @@
                 <ul>
                     @foreach($q->answers as $a)
                         <li>
-                            @if($a->text == 'other')
-                            <input class="input" type="text" value="" id="" name="answers[{{ $q->id }}][]">
+                            @if($a->type == 1)
+                            <input class="input" type="text" value="" id="" name="answers[{{ $q->id }}][{{$a->id}}][0]">
                             @else
-                            <input class="form-check-input" type="checkbox" value="{{ $a->id }}" id="" name="answers[{{ $q->id }}]">
+                            <input class="form-check-input" type="checkbox" value="{{ $a->id }}" id="" name="answers[{{ $q->id }}][{{$a->id}}]">
                             @endif
                             <label class="form-check-label" for="">
                                 {{ $a->text }}
