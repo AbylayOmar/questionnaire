@@ -25,7 +25,7 @@ class ResponseRequest extends FormRequest
     {
         return [
             'name' => 'string',
-            'answers' => '',
+            'answers' => 'required|array',
         ];
     }
 }
